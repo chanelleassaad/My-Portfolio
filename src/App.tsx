@@ -7,6 +7,7 @@ import navigation from "./data/NavigationData";
 import Contact from "./components/Contact";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import About from "./components/About";
+import Projects from "./components/Projects";
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -91,7 +92,7 @@ export default function App() {
             <About></About>
           </section>
           <section id="projects">
-            <h1>Projects</h1>
+            <Projects></Projects>
           </section>
           <section id="contact">
             <Contact></Contact>
