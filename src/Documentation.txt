@@ -1,0 +1,26 @@
+Hi! Welcome to My Portfolio. These are the details of my ptoject.
+
+Design Decisions:
+1. Layout: I chose a simple and clean layout to focus on content and readability. 
+The use of sections and creating cards helps organize the information into digestible chunks.
+2. Typography: I used a combination of font weights and sizes to create hierarchy and emphasis. 
+The choice of fonts ensures readability and visual appeal.
+3. Color Scheme: I chose shades of purple for the color scheme to create a vibrant and modern look. 
+The use of purple adds a sense of creativity and sophistication to the design.
+4. Responsive Design: I ensured that the website is responsive using media queries, allowing it to adapt to different screen sizes and devices.
+
+Challenges Faced:
+1. Responsive Design: Making the website fully responsive was challenging, especially ensuring that all elements look good on both desktop and mobile devices. 
+I overcame this by testing the website on various devices and adjusting the CSS accordingly.
+2.CSS Styling: Achieving the desired layout and styling, especially with Tailwind CSS,required careful planning and experimentation. 
+I overcame this by referring to the Tailwind CSS documentation and utilizing its utility classes effectively.
+
+Additional Features/Improvements:
+1. Animation: Adding subtle animations to elements such as the navigation menu or project cards could enhance the overall user experience.
+2. Interactive Elements: Implementing interactive elements such as a slider for project images(when added) could make the website more engaging.
+
+Adv of Tailwind:
+This was my first time using Tailwind and to be honest it was a bit difficult approach since i dont know the classes,
+however after some research i realized how simple and effective it is especially that it uses utility-first approach
+It's so much faster than using css especially regarding the media queries since it has a built in 'sm' and 'md'.. which can be editted.
+I also made use of its free templates and edit it them as I saw fit

@@ -1,3 +1,4 @@
+// App.js
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
@@ -12,8 +13,17 @@ import Projects from "./components/Projects";
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const handleNavigation = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = element.offsetTop - 100;
+      window.scrollTo({ behavior: "smooth", top: offset });
+      setMobileMenuOpen(false); // Close the mobile menu if it's open
+    }
+  };
+  
+
   return (
-   
     <div>
       <header className="sticky inset-x-0 top-0 z-50 bg-purple-700">
         <nav
@@ -29,16 +39,15 @@ export default function App() {
               className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
               onClick={() => setMobileMenuOpen(true)}
             >
-              <span className="sr-only">Open main menu</span>
-              <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+              <Bars3Icon className="h-6 w-6" color="white" aria-hidden="true" />
             </button>
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
               <a
                 key={item.name}
-                href={item.href}
                 className="text-sm font-semibold leading-6 text-white"
+                onClick={() => handleNavigation(item.id)}
               >
                 {item.name}
               </a>
@@ -70,8 +79,8 @@ export default function App() {
                   {navigation.map((item) => (
                     <a
                       key={item.name}
-                      href={item.href}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                      onClick={() => handleNavigation(item.id)}
                     >
                       {item.name}
                     </a>
@@ -82,41 +91,37 @@ export default function App() {
           </Dialog.Panel>
         </Dialog>
       </header>
-
-      <div className="px-0 lg:px-8 sections py-2">
+      <div className="px-3 lg:px-8 sections py-2">
         <main>
           <section id="home">
-            <Home></Home>
+            <Home />
           </section>
           <section id="about">
-            <About></About>
+            <About />
           </section>
           <section id="projects">
-            <Projects></Projects>
+            <Projects />
           </section>
           <section id="contact">
-            <Contact></Contact>
+            <Contact />
           </section>
         </main>
       </div>
-
       <footer className="bg-purple-700 text-white py-4 text-center">
-            <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
-            <ul className="flex justify-center space-x-4 mt-4">
-                <li>
-                    <a href="https://www.linkedin.com/in/chanelle-assaad" target="_blank" rel="noopener noreferrer" className="text-white">
-                        <FaLinkedin size={24} />
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/chanelleassaad" target="_blank" rel="noopener noreferrer" className="text-white">
-                        <FaGithub size={24} />
-                    </a>
-                </li>
-            </ul>
-        </footer>
+        <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
+        <ul className="flex justify-center space-x-4 mt-4">
+          <li>
+            <a href="https://www.linkedin.com/in/chanelle-assaad" target="_blank" rel="noopener noreferrer" className="text-white">
+              <FaLinkedin size={24} />
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/chanelleassaad" target="_blank" rel="noopener noreferrer" className="text-white">
+              <FaGithub size={24} />
+            </a>
+          </li>
+        </ul>
+      </footer>
     </div>
-
-    
   );
 }
