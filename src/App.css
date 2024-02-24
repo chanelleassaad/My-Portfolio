@@ -1,0 +1,24 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title-style {
+  color: #ddd6fe;
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.sections main section h1 {
+  color: #6d28d9;
+}
+
+.back-color {
+  background-color: #6d28d9;
+}
