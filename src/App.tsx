@@ -4,6 +4,8 @@ import { useState } from "react";
 import './App.css'
 import Home from "./components/Home/Home";
 import navigation from "./data/NavigationData";
+import Contact from "./components/Contact/Contact";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -11,13 +13,13 @@ export default function App() {
   return (
    
     <div>
-      <header className="sticky inset-x-0 top-0 z-50 back-color">
+      <header className="sticky inset-x-0 top-0 z-50 bg-purple-700">
         <nav
           className="flex items-center justify-between p-6 lg:px-8"
           aria-label="Global"
         >
           <div className="flex lg:flex-1">
-            <h2 className="title-style">My Portfolio</h2>
+            <h2 className="title-style">My Portfolio - Chanelle Assaad</h2>
           </div>
           <div className="flex lg:hidden">
             <button
@@ -91,11 +93,28 @@ export default function App() {
             <h1>Projects</h1>
           </section>
           <section id="contact">
-            <h1>Contact</h1>
+            <Contact></Contact>
           </section>
         </main>
       </div>
+
+      <footer className="bg-purple-700 text-white py-4 text-center">
+            <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
+            <ul className="flex justify-center space-x-4 mt-4">
+                <li>
+                    <a href="https://www.linkedin.com/in/chanelle-assaad" target="_blank" rel="noopener noreferrer" className="text-white">
+                        <FaLinkedin size={24} />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/chanelleassaad" target="_blank" rel="noopener noreferrer" className="text-white">
+                        <FaGithub size={24} />
+                    </a>
+                </li>
+            </ul>
+        </footer>
     </div>
 
+    
   );
 }
