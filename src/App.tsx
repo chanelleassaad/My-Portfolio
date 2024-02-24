@@ -2,10 +2,11 @@ import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import './App.css'
-import Home from "./components/Home/Home";
+import Home from "./components/Home";
 import navigation from "./data/NavigationData";
-import Contact from "./components/Contact/Contact";
+import Contact from "./components/Contact";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import About from "./components/About";
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -87,7 +88,7 @@ export default function App() {
             <Home></Home>
           </section>
           <section id="about">
-            <h1>About Me</h1>
+            <About></About>
           </section>
           <section id="projects">
             <h1>Projects</h1>

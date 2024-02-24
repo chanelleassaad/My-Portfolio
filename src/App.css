@@ -14,3 +14,11 @@
 .read-the-docs {
   color: #888;
 }
+
+.border-section {
+  margin-top: 5vh;
+  border: 2px solid #6d28d9; /* Border color */
+  background-color: #f3ebfe; /* Light purple background color */
+  border-radius: 8px; /* Optional: rounded corners */
+  padding: 20px; /* Optional: add padding */
+}

@@ -1,4 +1,4 @@
-import navigation from "../../data/NavigationData";
+import navigation from "../data/NavigationData";
 
 export default function Home() {
   return (
